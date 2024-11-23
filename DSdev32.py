@@ -1,5 +1,6 @@
 # Program to get a movie recommendation
 
+import types
 import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -24,7 +25,26 @@ class moviesData :
 
     
 Data1 = moviesData()
-Data1.AllData()
+#Data1.AllData()
 
-print(Data1.Movies.columns)
+#print(Data1.Movies.columns)
 
+maxlength,DataType,elem = [],[],[]
+
+for x in Data1.Movies :
+    print(x)
+    elem.extend(x)
+    #DataType.extend(Data1.Movies[x].info(type))
+    
+    
+print(DataType)
+print()
+print(Data1.Movies.info())
+
+temp = list(Data1.Movies['genres'])
+label1 = temp.set
+
+print('_'*30)
+print(label1)
+
+#plt.plot(label1, label2)
